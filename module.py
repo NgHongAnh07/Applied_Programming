@@ -12,3 +12,6 @@ username = input("Enter your name")
 # dataset of user infomation 
 # dataset of intermittent messages to the user will receive MAYBE
 
+#first step - Json file that should have all the sign and their dates
+        # Json file that has compatibility of all the sign and percentage
+# to create logic code
