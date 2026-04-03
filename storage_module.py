@@ -36,7 +36,7 @@ def save_report(user_name, month, day, sign_name, sign_data, filename="reports.t
             numbers = ", ".join(str(n) for n in sign_data["lucky_numbers"])
             content = sign_data["content"]
             
-            # 使用多行字符串 (Multi-line string) 构建一份极其详细的客户档案
+    
             report = (
                 f"\n==================================================\n"
                 f"🕒 [SAVED AT: {timestamp}]\n"
