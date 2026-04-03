@@ -86,7 +86,8 @@ class ZodiacApp:
                         break
                     else:
                         print("Please try again with another keyword.")
-                        
+                continue
+                  
             elif choice == "4":
                 break
 
