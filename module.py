@@ -112,7 +112,7 @@ def show_compatibility(user_sign, other_sign, signs_list, compatibility_matrix):
 
     score = compatibility_matrix[user_index][other_index]
 
-    print("\n===== COMPATIBILITY LAB =====")
+    print("\n===== COMPATIBILITY CHECK =====")
     print(user_sign.capitalize(), "and", other_sign.capitalize(), "compatibility score:", score, "%")
 
     if score >= 90:
@@ -128,15 +128,18 @@ def show_compatibility(user_sign, other_sign, signs_list, compatibility_matrix):
 
 
 def search_zodiac(keyword, zodiac_data):
-    keyword = keyword.lower()
+    keyword = keyword.lower().strip()
     found = False
 
-    print("\n===== DISCOVERY SEARCH =====")
+    print("\n" + "="*30)
+    print("      DISCOVERY SEARCH")
+    print("="*30)
 
     for sign, info in zodiac_data.items():
         element = info["element"].lower()
         content = info["content"]
 
+        # BƯỚC 1: Tạo biến 'text' TRƯỚC
         text = (
             info["element"] + " " +
             content["overview"] + " " +
@@ -147,12 +150,15 @@ def search_zodiac(keyword, zodiac_data):
             content["hidden_talent"]
         ).lower()
 
-        if keyword in element or keyword in text:
-            print(sign.capitalize(), info["symbol"], "-", info["element"])
+        # BƯỚC 2: Kiểm tra keyword TRONG 'text' SAU
+        if keyword in text:
+            print(f"✅ Found: {sign.capitalize()} {info['symbol']} - {info['element']}")
             found = True
 
     if not found:
-        print("No zodiac sign found for that keyword.")
+        print(f"❌ No zodiac sign found for: '{keyword}'")
+    
+    return found
 
 
 def ask_continue():
