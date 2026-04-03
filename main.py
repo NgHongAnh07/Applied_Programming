@@ -12,7 +12,6 @@ from module import (
 class ZodiacApp:
     def __init__(self, filename):
         self.data = load_data(filename)
-        # Add a safety check in case load_data returns None
         if self.data:
             self.signs_list = self.data["signs_list"]
             self.zodiac_data = self.data["zodiac_data"]
@@ -40,7 +39,6 @@ class ZodiacApp:
                         print(f"\nHello, {self.user_name}")
                         print(f"Your zodiac sign is: {self.user_sign.capitalize()} {self.zodiac_data[self.user_sign]['symbol']}")
                         
-                        # FIX 1: Automatically save the user's result to reports.txt
                         save_report(self.user_name, self.user_sign)
                         break
                     else:
@@ -61,8 +59,7 @@ class ZodiacApp:
                 show_personality(self.user_sign, self.zodiac_data)
 
             elif choice == "2":
-                # FIX 2: Corrected logic for Compatibility Lab
-                print("\n--- Compatibility Lab ---")
+                print("\n--- Compatibility Check ---")
                 print("Available signs: " + ", ".join([s.capitalize() for s in self.signs_list]))
                 
                 other_sign = input("Enter another zodiac sign: ").lower().strip()
@@ -86,7 +83,6 @@ class ZodiacApp:
                         break
 
                     if search_zodiac(keyword, self.zodiac_data):
-                        # Nếu tìm thấy ít nhất 1 cung, thoát vòng lặp nhập keyword
                         break
                     else:
                         print("Please try again with another keyword.")
