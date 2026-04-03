@@ -78,9 +78,19 @@ class ZodiacApp:
                     print("Invalid zodiac sign. Please check the spelling.")
 
             elif choice == "3":
-                keyword = input("Enter a keyword (example: fire, water, loyalty): ")
-                search_zodiac(keyword, self.zodiac_data)
+                while True:
+                    print("\n(Type 'back' to return to Main Menu)")
+                    keyword = input("Enter a keyword (e.g., fire, water, loyalty): ").strip()
 
+                    if keyword.lower() == 'back':
+                        break
+
+                    if search_zodiac(keyword, self.zodiac_data):
+                        # Nếu tìm thấy ít nhất 1 cung, thoát vòng lặp nhập keyword
+                        break
+                    else:
+                        print("Please try again with another keyword.")
+                        
             elif choice == "4":
                 break
 
