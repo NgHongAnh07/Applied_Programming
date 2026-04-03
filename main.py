@@ -76,7 +76,6 @@ class ZodiacApp:
 
             elif choice == "3":
                 while True:
-                    print("\n(Type 'back' to return to Main Menu)")
                     keyword = input("Enter a keyword (e.g., fire, water, loyalty): ").strip()
 
                     if keyword.lower() == 'back':
@@ -84,10 +83,10 @@ class ZodiacApp:
 
                     if search_zodiac(keyword, self.zodiac_data):
                         break
+
                     else:
                         print("Please try again with another keyword.")
-                continue
-                  
+
             elif choice == "4":
                 break
 
