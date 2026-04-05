@@ -1,20 +1,3 @@
-#username = input("Enter your name")
-#user opens the app
-#user enters name and dob
-#user decides if they want to store their data
-#user tell the program what they want, options are compatibility, star sign 
-# user receives their data
-
-# class for data storage of the user
-# class for compatibility
-# class for star sign 
-# dataset of all star signs and their behaviors
-# dataset of user infomation 
-# dataset of intermittent messages to the user will receive MAYBE
-
-#first step - Json file that should have all the sign and their dates
-        # Json file that has compatibility of all the sign and percentage
-# to create logic code
 import json
 
 def is_valid_date(month, day):
@@ -54,8 +37,8 @@ def show_main_menu():
     print("      ZODIAC MAIN MENU")
     print("="*30)
     print("1. Personality Analysis")
-    print("2. Compatibility Lab")
-    print("3. Discovery Search")
+    print("2. Compatibility Check")
+    print("3. Zodiac Stories")
     print("4. Exit")
     print("="*30)
 
@@ -118,33 +101,24 @@ def show_compatibility(user_sign, other_sign, signs_list, compatibility_matrix, 
     else:
         print("\n(Specific relationship details not found for this pair.)")
 
-def search_zodiac(keyword, zodiac_data):
-    """Searches for zodiac signs by keywords in their content tags."""
-    keyword = keyword.lower()
-    found_signs = []
+def show_zodiac_story(sign, zodiac_data):
+    """Displays the mythological story of the chosen zodiac sign."""
+    sign_key = sign.lower()
+    info = zodiac_data.get(sign_key, {})
+    stories = info.get("zodiac story", {})
 
-    print(f"\n🔎 Discovery Search results for: '{keyword}'...")
+    if not stories:
+        print(f"\n📖 No legend found for {sign.capitalize()} yet.")
+        return
 
-    for sign, info in zodiac_data.items():
-        content = info["content"]
-        search_text = (
-            info["element"] + " " +
-            content["overview"] + " " +
-            content["fun_fact"] + " " +
-            content["hidden_talent"] + " " +
-            " ".join(info["lucky_colors"])
-        ).lower()
+    print("\n" + "📜" + "="*40)
+    print(f"      THE LEGEND OF {sign.upper()}")
+    print("="*42)
 
-        if keyword in search_text:
-            found_signs.append(f"-> {sign.capitalize()} {info['symbol']} ({info['element']})")
-
-    if found_signs:
-        for item in found_signs:
-            print(item)
-        return True
-    else:
-        print("No matching zodiac signs found for that keyword.")
-        return False
+    for title, story_text in stories.items():
+        print(f"\n✨ {title}")
+        print("-" * len(title))
+        print(story_text)
 
 def ask_continue():
     """Asks the user if they want to return to the main menu."""
