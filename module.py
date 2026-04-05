@@ -110,8 +110,6 @@ def show_zodiac_story(sign, zodiac_data):
     if not stories:
         print(f"\n📖 No legend found for {sign.capitalize()} yet.")
         return
-
-    print("\n" + "📜" + "="*40)
     print(f"      THE LEGEND OF {sign.upper()}")
     print("="*42)
 
