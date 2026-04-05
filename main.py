@@ -77,7 +77,7 @@ class ZodiacApp:
                         
                         repeat = input("\nWould you like to check another sign? (yes/no): ").lower().strip()
                         if repeat not in ['yes', 'y']:
-                            break # Exits to the Main Menu
+                            break 
                     else:
                         print("Invalid zodiac sign. Please check the spelling.")
             elif choice == "3":
