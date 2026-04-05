@@ -63,8 +63,11 @@ class ZodiacApp:
                 while True:
                     print("\n--- Compatibility Check ---")
                     print("Available signs: " + ", ".join([s.capitalize() for s in self.signs_list]))
-                    other_sign = input("Enter another zodiac sign: ").lower().strip()
+                    
+                    other_sign = input("Enter a sign to check (or type 'menu' to go back): ").lower().strip()
 
+                    if other_sign == 'menu':
+                        break  # This breaks the inner loop and returns to the Main Menu
 
                     if other_sign in self.signs_list:
                         show_compatibility(
@@ -75,9 +78,9 @@ class ZodiacApp:
                             self.zodiac_data
                         )
                         
-                        repeat = input("\nWould you like to check another sign? (yes/no): ").lower().strip()
-                        if repeat not in ['yes', 'y']:
-                            break 
+                        again = input("\nCheck another sign? (yes/no): ").lower().strip()
+                        if again != 'yes' :
+                            break  
                     else:
                         print("Invalid zodiac sign. Please check the spelling.")
             elif choice == "3":
