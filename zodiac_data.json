@@ -1,200 +1,417 @@
 {
-  "signs_list": [
-    "aries", "taurus", "gemini", "cancer", "leo", "virgo",
-    "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"
-  ],
+  "signs_list": ["aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"],
   "zodiac_data": {
     "aries": {
       "symbol": "♈",
+      "image_path": "images/Aries.png",
       "start": "03-21",
       "end": "04-19",
       "element": "Fire",
       "lucky_colors": ["Red", "Mustard", "Orange"],
       "lucky_numbers": [1, 9, 18],
       "content": {
-        "overview": "You are the spark that starts the fire. Being an Aries means living life at 100 mph, fueled by a natural competitive streak and an honest, 'what you see is what you get' personality. You don’t just walk into a room; you arrive with a mission. While others hesitate, you’ve already taken the first three steps toward the goal, making you the ultimate pioneer of the zodiac.",
-        "fun_fact": "Aries is ruled by Mars, the planet of action and energy, which is why Aries is always so passionate and fiercely independent.",
-        "emotional_tendency": "Aries feels emotions intensely and expresses them immediately. They are quick to anger but also quick to forgive and forget.",
-        "compatibility_notes": "In love, Aries is passionate and direct. They often match well with Leo and Sagittarius because they share the same fiery energy.",
-        "general_advice": "Patience is a virtue. Your speed and drive are strengths, but taking a moment to breathe before acting can save you from trouble.",
-        "hidden_talent": "You may have a hidden talent for entrepreneurship, competitive sports, or inspiring others to take bold leaps."
+        "overview": "You are the spark that starts the fire. Being an Aries means living life at 100 mph, fueled by a natural competitive streak and an honest personality.",
+        "fun_fact": "Aries is ruled by Mars, the planet of action and energy, which is why Aries is always so passionate.",
+        "emotional_tendency": "Aries feels emotions intensely and expresses them immediately. They are quick to anger but also quick to forgive.",
+        "explanation": "As a Fire sign, Aries is energetic and bold. You naturally connect with signs that match your energy or keep up with your fast-paced nature. Air signs fuel your fire, while fellow Fire signs amplify your intensity.",
+        "general_advice": "Patience is a virtue. Taking a moment to breathe before acting can save you from trouble.",
+        "hidden_talent": "You may have a hidden talent for entrepreneurship, competitive sports, or inspiring others."
+      },
+      "pair_compatibility": {
+        "aries": "Two Aries create a passionate relationship, but clashes can happen due to strong personalities.",
+        "taurus": "Taurus is grounded and steady, which can balance Aries' impulsiveness or create tension.",
+        "gemini": "Gemini’s curiosity matches Aries’ energy, making this a fun and dynamic pairing.",
+        "cancer": "Cancer is emotional and nurturing, which can clash with Aries’ direct nature.",
+        "leo": "Both are Fire signs, creating a powerful bond with strong mutual admiration.",
+        "virgo": "Virgo’s detail can conflict with Aries’ impulsiveness, but they complement if they respect differences.",
+        "libra": "Libra brings balance to Aries’ intensity, creating an opposites-attract dynamic.",
+        "scorpio": "Scorpio’s intensity matches Aries’ passion, but power struggles are likely.",
+        "sagittarius": "This is a natural match, as both love adventure, freedom, and excitement.",
+        "capricorn": "Capricorn’s discipline contrasts Aries’ impulsiveness, forming a goal-driven partnership.",
+        "aquarius": "Aquarius’ originality aligns well with Aries’ boldness, making this an exciting pairing.",
+        "pisces": "Pisces is sensitive, which can either soften Aries or lead to misunderstandings."
+      },
+      "zodiac story":{
+        "♈ Aries — The Golden Ram" : "A Greek king's second wife plotted to murder her stepchildren, Phrixus and Helle. To save them, the gods sent a flying ram with fleece of pure gold. During their escape across the sea, Helle fell off and drowned, but Phrixus safely reached the kingdom of Colchis. In gratitude to the gods, Phrixus sacrificed the ram to Zeus, and it was placed in the heavens as the constellation Aries. Its golden fleece was preserved, later becoming the legendary artifact sought by Jason and the Argonauts."
       }
     },
     "taurus": {
       "symbol": "♉",
+      "image_path": "images/Taurus.png",
       "start": "04-20",
       "end": "05-20",
       "element": "Earth",
       "lucky_colors": ["Green", "Pink", "Cream"],
       "lucky_numbers": [2, 6, 15, 24],
       "content": {
-        "overview": "You are the anchor in a chaotic world. Being a Taurus means appreciating the finer things in life—the scent of rain, a perfectly cooked meal, or the feel of high-quality fabric. You move at your own pace, refusing to be rushed by a world that is always in a hurry. Once you’ve made up your mind, you are immovable, providing a sense of security and reliability that everyone around you relies on.",
-        "fun_fact": "Taurus is ruled by Venus, the planet of beauty and love, which is why Taurus has a strong appreciation for art and beautiful surroundings.",
+        "overview": "You are the anchor in a chaotic world. Being a Taurus means appreciating the finer things in life and moving at your own steady pace.",
+        "fun_fact": "Taurus is ruled by Venus, the planet of beauty and love, giving you a strong appreciation for art.",
         "emotional_tendency": "Taurus usually hides emotions at first and prefers to feel safe before opening up. They are steady but can become overly attached.",
-        "compatibility_notes": "Taurus often matches well with Virgo and Capricorn because they share similar values such as stability and trust.",
-        "general_advice": "Do not be afraid of change. Your stability is your strength, but growth comes from stepping outside your comfort zone.",
-        "hidden_talent": "You may have a hidden talent for interior design, cooking, music, fashion, or gardening."
+        "explanation": "As an Earth sign, Taurus values stability, physical comfort, and loyalty. You connect best with fellow Earth signs who share your practical nature, or Water signs who provide the emotional depth to your grounded world.",
+        "general_advice": "Do not be afraid of change. Growth comes from stepping outside your comfort zone.",
+        "hidden_talent": "You may have a hidden talent for interior design, cooking, music, or gardening."
+      },
+      "pair_compatibility": {
+        "aries": "Aries is too fast for your liking, but their energy can push you out of your comfort zone.",
+        "taurus": "Double the stability, but also double the stubbornness. A very peaceful but slow-moving pair.",
+        "gemini": "Gemini's constant need for change confuses your need for routine.",
+        "cancer": "A beautiful match; both value home, family, and long-term security.",
+        "leo": "Both are stubborn. Leo wants a stage, and you want a quiet home; requires compromise.",
+        "virgo": "An excellent match. You both speak the language of practicality and hard work.",
+        "libra": "Both ruled by Venus, you share a love for beauty, but Libra is more social than you.",
+        "scorpio": "Opposites attract. Scorpio’s intensity balances your calm, creating a powerful bond.",
+        "sagittarius": "Sagittarius wants to travel; you want to stay home. High friction.",
+        "capricorn": "The ultimate power couple of the Earth signs. You build a solid future together.",
+        "aquarius": "Aquarius is too unconventional for your traditional heart. Hard to find common ground.",
+        "pisces": "A gentle and romantic match. Pisces adds magic to your practical life."
+      },
+      "zodiac story": {
+        "♉ Taurus — The Disguise of Zeus": "Europa, a beautiful Phoenician princess, caught the eye of Zeus, the king of the gods. To avoid the jealousy of his wife Hera, Zeus transformed himself into a magnificent, tame white bull and mingled with the princess's herd. Captivated by the bull's gentle nature, Europa climbed onto its back. Instantly, the bull plunged into the sea and swam away with her to the island of Crete. This white bull was later immortalized in the stars as Taurus (and Europa's name was given to the continent of Europe)."
       }
     },
     "gemini": {
       "symbol": "♊",
+      "image_path": "images/Gemini.png",
       "start": "05-21",
       "end": "06-20",
       "element": "Air",
       "lucky_colors": ["Yellow", "Light Green", "White"],
       "lucky_numbers": [3, 5, 12, 21],
       "content": {
-        "overview": "You are a kaleidoscope of ideas and interests. Being a Gemini means having a 'dual' nature that allows you to see both sides of every story, making you an incredible communicator and a social chameleon. Your mind moves faster than most people can talk, and your curiosity is a bottomless pit that keeps you perpetually young at heart, always searching for the next 'why.'",
-        "fun_fact": "Gemini is ruled by Mercury, the planet of communication, which is why Geminis are so witty and expressive.",
-        "emotional_tendency": "Gemini processes emotions through logic and talk. They might seem detached at times, but they are just trying to understand their feelings intellectually.",
-        "compatibility_notes": "Gemini thrives with Libra and Aquarius. They need partners who can keep up with their fast-paced minds and love for variety.",
-        "general_advice": "Focus is your friend. You have many interests, but finishing one thing before starting another will lead to greater success.",
-        "hidden_talent": "You may have a hidden talent for podcasting, writing, public speaking, or picking up new languages incredibly fast."
+        "overview": "You are a kaleidoscope of ideas. Being a Gemini means having a dual nature that allows you to see both sides of every story.",
+        "fun_fact": "Gemini is ruled by Mercury, the planet of communication, which is why Geminis are so witty.",
+        "emotional_tendency": "Gemini processes emotions through logic and talk. They might seem detached at times, but they are just analyzing.",
+        "explanation": "As an Air sign, Gemini thrives on variety and intellectual stimulation. You align with other Air signs who keep up with your wit, or Fire signs who spark your curiosity.",
+        "general_advice": "Focus is your friend. Finishing one thing before starting another leads to greater success.",
+        "hidden_talent": "You may have a hidden talent for podcasting, writing, or learning languages fast."
+      },
+      "pair_compatibility": {
+        "aries": "High energy and fun. You both love new experiences and hate being bored.",
+        "taurus": "Taurus feels too slow and heavy for your light-hearted spirit.",
+        "gemini": "A whirlwind of conversation and ideas, but you might struggle to make decisions.",
+        "cancer": "Cancer is too moody and sensitive for your logical way of thinking.",
+        "leo": "A vibrant and social pair. You both love being the center of attention.",
+        "virgo": "Both ruled by Mercury, but you focus on big ideas while Virgo focuses on details.",
+        "libra": "A perfect intellectual match. You both love art, people, and endless conversation.",
+        "scorpio": "Scorpio is too dark and private for your open and sunny disposition.",
+        "sagittarius": "Opposites attract. You both love freedom and learning from different angles.",
+        "capricorn": "Capricorn is too serious and disciplined for your playful nature.",
+        "aquarius": "Best friends and great lovers. You both value independence and freedom.",
+        "pisces": "Pisces is too emotional and vague for your precise and logical mind."
+      },
+      "zodiac story":{
+        "♊ Gemini — The Inseparable Brothers": "The Queen of Sparta gave birth to twin brothers: Castor and Pollux. While Castor was mortal, Pollux was the son of Zeus and possessed immortality. The brothers were inseparable and fought side by side in many battles. When Castor was ultimately killed in combat, a heartbroken Pollux begged Zeus to let him give up his immortality to save his brother. Touched by their profound bond, Zeus placed them both in the night sky together, forever united as Gemini."
       }
+
     },
     "cancer": {
       "symbol": "♋",
+      "image_path": "images/Cancer.png",
       "start": "06-21",
       "end": "07-22",
       "element": "Water",
       "lucky_colors": ["Silver", "White", "Sea Green"],
       "lucky_numbers": [2, 7, 11, 25],
       "content": {
-        "overview": "You are the emotional heartbeat of the zodiac. Being a Cancer means having a memory like an attic—filled with sentimental treasures and a deep connection to your roots. You have an incredible 'mothering' energy that makes your home a sanctuary for anyone lucky enough to be in your inner circle. Your intuition is your compass, guiding you through life's tides.",
-        "fun_fact": "Cancer is ruled by the Moon, which governs emotions and instincts, making Cancers very sensitive to the moods of others.",
+        "overview": "You are the emotional heartbeat of the zodiac. You have an incredible nurturing energy and a deep connection to your roots.",
+        "fun_fact": "Cancer is ruled by the Moon, which governs emotions, making Cancers sensitive to the moods of others.",
         "emotional_tendency": "Cancers feel everything very deeply. They have a tough outer shell but are soft and caring on the inside.",
-        "compatibility_notes": "Cancer finds comfort with Scorpio and Pisces. They look for deep emotional connections and long-term security.",
-        "general_advice": "Let people in. Protecting your heart is natural, but vulnerability is where your true strength and connections grow.",
-        "hidden_talent": "You likely have a hidden talent for interior design, caregiving, photography, or even real estate."
+        "explanation": "As a Water sign, you are deeply intuitive and protective of your heart. You connect best with fellow Water signs who understand your moods, or Earth signs who provide structure.",
+        "general_advice": "Let people in. Vulnerability is where your true strength and connections grow.",
+        "hidden_talent": "You likely have a hidden talent for interior design, photography, or real estate."
+      },
+      "pair_compatibility": {
+        "aries": "Aries is too blunt and might accidentally hurt your sensitive feelings.",
+        "taurus": "Highly compatible. You both want a cozy home and a loyal partner.",
+        "gemini": "Gemini’s inconsistency makes you feel insecure and anxious.",
+        "cancer": "Deeply nurturing and emotional, but you might drown in each other's moods.",
+        "leo": "The Moon and the Sun. You provide the support while Leo provides protection.",
+        "virgo": "A very stable pair. You provide the heart, and Virgo provides the plan.",
+        "libra": "Libra is too social and avoids deep emotions, leaving you feeling lonely.",
+        "scorpio": "A soulmate match. The loyalty and emotional depth here are unparalleled.",
+        "sagittarius": "Sagittarius wants to run free, while you want to stay home. Very difficult.",
+        "capricorn": "Opposites attract. Capricorn provides the house, and you provide the home.",
+        "aquarius": "Aquarius is too detached and logical for your deep emotional needs.",
+        "pisces": "A dreamy and spiritual connection. You both swim in the same emotional waters."
+      },
+      "zodiac story": {
+        "♋ Cancer — Hera's Assassin": "This story is tied to the great hero Hercules (Heracles). While Hercules was fighting the multi-headed Hydra during his famous \"Twelve Labors\" the goddess Hera—who despised him—sent a giant crab to pinch his foot and break his concentration. Hercules easily crushed the crab under his heel, but Hera, appreciating the creature's loyalty and effort, rewarded it by placing its remains among the stars as the constellation Cancer."
       }
+
     },
     "leo": {
       "symbol": "♌",
+      "image_path": "images/Leo.png",
       "start": "07-23",
       "end": "08-22",
       "element": "Fire",
       "lucky_colors": ["Gold", "Yellow", "Orange"],
       "lucky_numbers": [1, 4, 10, 19],
       "content": {
-        "overview": "You carry a natural, sun-like warmth that makes people want to be near you. Being a Leo isn't just about the spotlight; it’s about a deep sense of loyalty and a protective heart that looks out for the 'underdog.' You have a creative flair that turns even the most mundane tasks into a performance, and your generosity often knows no bounds when it comes to the people you love.",
-        "fun_fact": "Leo is ruled by the Sun, the center of our solar system, which explains why Leos have such a radiant and magnetic personality.",
-        "emotional_tendency": "Leos are expressive and passionate. When they love, they love loudly, but they can be hurt if their efforts aren't appreciated.",
-        "compatibility_notes": "Leo matches perfectly with Aries and Sagittarius. They appreciate people who are as confident and adventurous as they are.",
+        "overview": "You carry a natural, sun-like warmth. Being a Leo means having a deep sense of loyalty and a protective heart for the people you love.",
+        "fun_fact": "Leo is ruled by the Sun, which explains why Leos have such a radiant and magnetic personality.",
+        "emotional_tendency": "Leos are expressive and passionate. When they love, they love loudly, but they can be hurt if not appreciated.",
+        "explanation": "As a Fire sign, Leo is warm, creative, and loves to be appreciated. You naturally connect with fellow Fire signs who match your passion, or Air signs who provide the intellectual 'oxygen' to keep your fire burning.",
         "general_advice": "True confidence doesn't always need an audience. Your inner light shines even when no one is watching.",
         "hidden_talent": "You likely have a hidden talent for acting, leadership, event planning, or creative direction."
+      },
+      "pair_compatibility": {
+        "aries": "A powerhouse match. Passionate, energetic, and full of mutual respect.",
+        "taurus": "A battle of wills. Both are stubborn and refuse to back down.",
+        "gemini": "Fun and social. You love the audience, and Gemini loves to talk.",
+        "cancer": "You love being the protector, and Cancer loves being cared for, but moods can clash.",
+        "leo": "A royal pairing, but there might not be enough room for two thrones.",
+        "virgo": "Virgo’s criticism can hurt your pride, but they help keep you organized.",
+        "libra": "A very stylish and social pair. You both love the finer things in life.",
+        "scorpio": "Intense and dramatic. If you can stop competing for power, it’s very strong.",
+        "sagittarius": "Best adventure buddies. You both have a huge zest for life and freedom.",
+        "capricorn": "Capricorn is too frugal and serious for your flamboyant and generous heart.",
+        "aquarius": "Opposites attract. You focus on the 'Self' while Aquarius focuses on the 'Group'.",
+        "pisces": "You might find Pisces too confusing, and they might find you too overwhelming."
+      },
+      "zodiac story":{
+        "♌ Leo — The Invulnerable Beast": "Also originating from the \"Twelve Labors\" of Hercules. His very first task was to slay the Nemean Lion, a massive, man-eating beast with impenetrable golden fur. Since his arrows and club could not pierce its skin, Hercules used his immense strength to wrestle the beast and strangle it with his bare hands. To commemorate this heroic feat, Zeus placed the fearsome lion in the sky as Leo."
       }
     },
     "virgo": {
       "symbol": "♍",
+      "image_path": "images/Virgo.png",
       "start": "08-23",
       "end": "09-22",
       "element": "Earth",
       "lucky_colors": ["Navy", "Brown", "White"],
       "lucky_numbers": [5, 14, 23, 32],
       "content": {
-        "overview": "Your mind is a finely-tuned instrument that notices the beauty in precision. Being a Virgo means seeing the world in high-definition; where others see a mess, you see a system waiting to be optimized. You show your love through quiet acts of service—fixing a problem before anyone else realizes it exists or offering the exact piece of advice someone needs to hear.",
-        "fun_fact": "Virgo is ruled by Mercury, the planet of communication and intellect, which gives Virgo strong analytical skills.",
-        "emotional_tendency": "Virgo tends to think deeply about feelings instead of showing them openly. They show love through actions and support.",
-        "compatibility_notes": "Virgo connects well with Taurus and Capricorn because these signs value loyalty, effort, and emotional security.",
-        "general_advice": "Do not be too hard on yourself. You do not need to be perfect to be worthy. Let yourself rest and make mistakes.",
-        "hidden_talent": "You may have a hidden talent for analysis, writing, editing, planning, coding, or teaching."
+        "overview": "Your mind is a finely-tuned instrument. Being a Virgo means seeing the world in high-definition and showing love through acts of service.",
+        "fun_fact": "Virgo is ruled by Mercury, the planet of communication, which gives Virgo strong analytical skills.",
+        "emotional_tendency": "Virgo tends to think deeply about feelings instead of showing them openly. They show love through actions.",
+        "explanation": "As an Earth sign, Virgo values precision, helpfulness, and health. You connect best with fellow Earth signs who appreciate your order, or Water signs who appreciate your quiet devotion.",
+        "general_advice": "Do not be too hard on yourself. You do not need to be perfect to be worthy. Let yourself rest.",
+        "hidden_talent": "You may have a hidden talent for analysis, writing, editing, planning, or coding."
+      },
+      "pair_compatibility": {
+        "aries": "Aries is too chaotic for your organized mind. High stress potential.",
+        "taurus": "A very comfortable and stable match. You both value quality and logic.",
+        "gemini": "Both intellectual, but Gemini is too scattered for your focused nature.",
+        "cancer": "A very sweet match. You fix their problems, and they care for your heart.",
+        "leo": "You notice the flaws Leo tries to hide, which can lead to tension.",
+        "virgo": "Perfectly organized and efficient, but you might forget to actually have fun.",
+        "libra": "You find Libra too indecisive, and they find you too critical.",
+        "scorpio": "A deep and loyal bond. You both appreciate privacy and investigation.",
+        "sagittarius": "Sagittarius is too messy and irresponsible for your liking.",
+        "capricorn": "The ultimate team. You are both hardworking, practical, and goal-oriented.",
+        "aquarius": "Too much logic and not enough heart. You both might feel like roommates.",
+        "pisces": "Opposites attract. Pisces dreams the dream, and you make it happen."
+      },
+
+      "zodiac story": {
+        "♍ Virgo — The Goddess of Justice": "During the mythical \"Golden Age,\" gods and humans lived peacefully together on Earth. However, as time passed, humanity became increasingly greedy and corrupt (the \"Iron Age\"), prompting the gods to abandon Earth in disappointment. Astraea, the goddess of purity and justice, was the very last immortal to leave. Heartbroken and despairing over human wickedness, she ascended to the heavens and became the constellation Virgo, watching over humanity from afar."
       }
+
     },
     "libra": {
       "symbol": "♎",
+      "image_path": "images/Libra.png",
       "start": "09-23",
       "end": "10-22",
       "element": "Air",
       "lucky_colors": ["Pink", "Blue", "Lavender"],
       "lucky_numbers": [6, 15, 24, 33],
       "content": {
-        "overview": "You are the bridge-builder, constantly seeking the perfect middle ground. Being a Libra means having a refined eye for aesthetics and a soul that craves harmony above all else. You are a natural diplomat who can navigate complex social waters with grace, making everyone feel heard and valued. For you, life is most beautiful when it is shared and perfectly balanced.",
-        "fun_fact": "Libra is the only sign represented by an inanimate object—the scales—symbolizing their constant quest for balance and justice.",
-        "emotional_tendency": "Libras try to keep their emotions balanced. They may avoid bringing up problems to keep the peace, but they value fairness above all.",
-        "compatibility_notes": "Libra connects well with Gemini and Aquarius. They love intellectual conversations and social outings.",
+        "overview": "You are the bridge-builder. Being a Libra means having a soul that craves harmony and a refined eye for aesthetics.",
+        "fun_fact": "Libra is the only sign represented by an inanimate object—the scales—symbolizing their quest for balance.",
+        "emotional_tendency": "Libras try to keep their emotions balanced. They value fairness above all in their relationships.",
+        "explanation": "As an Air sign, Libra seeks harmony, beauty, and partnership. You naturally align with other Air signs who share your social grace, or Fire signs who add excitement.",
         "general_advice": "It’s okay to pick a side. Making a decision is better than staying in the middle and feeling stuck.",
         "hidden_talent": "You likely have a hidden talent for law, fashion, graphic design, or mediation."
-      }
+      },
+      "pair_compatibility": {
+        "aries": "Opposites attract. Aries is the 'I', and you are the 'We'. Great balance.",
+        "taurus": "Both love beauty, but you want to go out while Taurus wants to stay in.",
+        "gemini": "A perfect social match. You'll never run out of things to talk about.",
+        "cancer": "Cancer is too needy for your social and light-hearted nature.",
+        "leo": "A beautiful and glamorous pair. You both love romance and being seen.",
+        "virgo": "Virgo is too focused on the small stuff, while you want to see the whole picture.",
+        "libra": "Very peaceful and beautiful, but you might struggle to ever make a decision.",
+        "scorpio": "Scorpio is too intense and private for your open and social heart.",
+        "sagittarius": "Adventure and fun. You both love people, travel, and new ideas.",
+        "capricorn": "Capricorn is too strict and focused on work for your pleasure-seeking soul.",
+        "aquarius": "An ideal match. You share a love for justice, social life, and independence.",
+        "pisces": "Too much indecision. Both signs struggle to be direct with each other."
+      },
+      "zodiac story": {
+        "♎ Libra — The Scales of Balance" : "Libra is the only zodiac sign that is an inanimate object rather than a living creature. It represents the \"Scales of Justice\" held by Astraea (Virgo) to weigh the good and evil deeds of men. When the scales tip, it signifies a world plagued by sin; when they are perfectly balanced, it represents harmony and justice. Placed right next to Virgo in the sky, the scales symbolize eternal fairness."
+        }
     },
     "scorpio": {
       "symbol": "♏",
+      "image_path": "images/Scorpio.png",
       "start": "10-23",
       "end": "11-21",
       "element": "Water",
       "lucky_colors": ["Deep Red", "Black", "Maroon"],
       "lucky_numbers": [8, 13, 22, 31],
       "content": {
-        "overview": "You are a person of profound depth and unshakeable focus. Being a Scorpio means experiencing life with an intensity that others might find intimidating, but it’s simply because you refuse to live on the surface. You value radical honesty and absolute loyalty; once someone has earned your trust, you will walk through fire for them, but you never forget a betrayal.",
-        "fun_fact": "Scorpio is ruled by Pluto, the planet of transformation and rebirth, which is why Scorpios are so resilient and good at reinventing themselves.",
+        "overview": "You are a person of profound depth. Being a Scorpio means experiencing life with intensity and valuing absolute loyalty.",
+        "fun_fact": "Scorpio is ruled by Pluto, the planet of transformation, which is why Scorpios are so resilient.",
         "emotional_tendency": "Scorpio's emotions are like an ocean—quiet on the surface but incredibly deep and powerful underneath.",
-        "compatibility_notes": "Scorpio aligns with Cancer and Pisces. They crave honesty, intensity, and deep emotional loyalty.",
-        "general_advice": "Trust is earned, but don't let suspicion keep you lonely. Letting people in can lead to the transformation you crave.",
+        "explanation": "As a Water sign, you seek emotional depth and absolute loyalty. You naturally connect with signs that speak your silent language or provide stability.",
+        "general_advice": "Trust is earned, but don't let suspicion keep you lonely. Letting people in can lead to transformation.",
         "hidden_talent": "You likely have a hidden talent for psychology, investigation, strategy, or financial management."
+      },
+      "pair_compatibility": {
+        "aries": "Scorpio's intensity matches Aries' passion, but power struggles are likely.",
+        "taurus": "Opposites attract; Taurus provides stability while Scorpio provides depth.",
+        "gemini": "Communication is key here as Scorpio dives deep while Gemini stays light.",
+        "cancer": "A soulmate connection built on deep emotional trust and loyalty.",
+        "leo": "Both are powerful and loyal, but need to learn to share control.",
+        "virgo": "Both value depth; Virgo’s practicality grounds Scorpio’s emotions.",
+        "libra": "A balance of truth and harmony, though Scorpio may find Libra too indecisive.",
+        "scorpio": "Extremely intense; it’s either a spiritual bond or a battle of wills.",
+        "sagittarius": "Freedom meets commitment; requires a lot of mutual respect.",
+        "capricorn": "A very strong, goal-oriented match built on mutual respect.",
+        "aquarius": "Both are independent and may clash over different emotional needs.",
+        "pisces": "A magical, intuitive connection that transcends words."
+      },
+      "zodiac story":{
+        "♏ Scorpio — The Hunter's Demise": "Orion, a son of Poseidon, was an exceptionally gifted hunter, but he was also incredibly arrogant. He once boasted that he would hunt down and kill every wild beast on Earth. This enraged Gaia, the goddess of the Earth (some versions say it was Hera). She sent a colossal, venomous scorpion to assassinate him. The scorpion succeeded in stinging Orion to death. As a reward, the scorpion was raised to the heavens. Orion was also immortalized, but placed on the exact opposite side of the sky. Thus, when Scorpio rises, Orion sets—ensuring the two will never cross paths again."
       }
     },
     "sagittarius": {
       "symbol": "♐",
+      "image_path": "images/sagittarius.png",
       "start": "11-22",
       "end": "12-21",
       "element": "Fire",
       "lucky_colors": ["Purple", "Dark Blue", "Turquoise"],
       "lucky_numbers": [3, 7, 9, 21],
       "content": {
-        "overview": "You are a lifelong student of the world, driven by an insatiable hunger for truth and new horizons. For you, life is a grand adventure that shouldn't be wasted on a routine. You possess a 'wild-child' spirit and a blunt honesty that is refreshing, if sometimes startling. Your optimism is your greatest weapon, allowing you to find the silver lining in every storm.",
-        "fun_fact": "Sagittarius is ruled by Jupiter, the planet of luck and expansion, which is why they always seem to land on their feet.",
-        "emotional_tendency": "Sagittarius is very open with their feelings. They don't like to feel 'trapped' by heavy emotions and prefer to move forward quickly.",
-        "compatibility_notes": "Sagittarius loves the energy of Aries and Leo. They need a partner who wants to explore the world with them.",
-        "general_advice": "Details matter too. Your big-picture thinking is amazing, but don't forget the small steps needed to get there.",
+        "overview": "You are a lifelong student of the world. Your optimism is your greatest weapon, allowing you to find silver linings.",
+        "fun_fact": "Sagittarius is ruled by Jupiter, the planet of luck, which is why they always seem to land on their feet.",
+        "emotional_tendency": "Sagittarius is very open with their feelings. They don't like to feel 'trapped' by heavy emotions.",
+        "explanation": "As a Fire sign, Sagittarius is an explorer and a truth-seeker. You naturally connect with fellow Fire signs or Air signs who fuel your ideas.",
+        "general_advice": "Details matter too. Your big-picture thinking is amazing, but don't forget the small steps.",
         "hidden_talent": "You likely have a hidden talent for philosophy, travel writing, coaching, or teaching."
+      },
+      "pair_compatibility": {
+        "aries": "A match made in heaven. Fast, fun, and always moving forward.",
+        "taurus": "Taurus is too boring and restrictive for your free-spirited nature.",
+        "gemini": "Opposites attract. You both love learning, but from different perspectives.",
+        "cancer": "Cancer wants roots, and you want wings. Very difficult to sustain.",
+        "leo": "Passionate and grand. You both have big dreams and the energy to chase them.",
+        "virgo": "Virgo is too critical of your messy and spontaneous lifestyle.",
+        "libra": "A great social pair. You provide the adventure, and Libra provides the charm.",
+        "scorpio": "Scorpio's jealousy clashes with your need for absolute freedom.",
+        "sagittarius": "The most fun pair in the zodiac, but no one is watching the map.",
+        "capricorn": "Capricorn feels like a 'parent' to your spirit. Too much friction.",
+        "aquarius": "A perfect match for freedom-seekers. You both value independence.",
+        "pisces": "You are both dreamers, but you are too blunt for Pisces' sensitive heart."
+      },
+      "zodiac story": {
+        "♐ Sagittarius — The Noble Centaur" : "Sagittarius represents the centaur Chiron. Unlike other centaurs who were known to be violent and barbaric, Chiron was wise, gentle, and highly educated. He served as a tutor to many great Greek heroes, including Achilles and Hercules. Tragically, Hercules accidentally shot Chiron with an arrow dipped in the lethal venom of the Hydra. Because Chiron was immortal, the poison could not kill him, but it condemned him to endless, agonizing pain. To find peace, Chiron traded his immortality to Prometheus. Mourning his loss, Zeus placed the noble centaur in the stars."
       }
     },
     "capricorn": {
       "symbol": "♑",
+      "image_path": "images/Capricorn.png",
       "start": "12-22",
       "end": "01-19",
       "element": "Earth",
       "lucky_colors": ["Black", "Dark Green", "Gray"],
       "lucky_numbers": [4, 8, 17, 26],
       "content": {
-        "overview": "You are the architect of the zodiac, always thinking ten steps ahead. Being a Capricorn means understanding that anything worth having requires a solid foundation and a lot of hard work. You have a dry, witty sense of humor that only those close to you truly see, and a stoic resilience that allows you to climb the steepest mountains without ever complaining about the cold.",
+        "overview": "You are the architect of the zodiac, always thinking ten steps ahead. You have a stoic resilience that allows you to climb the steepest mountains.",
         "fun_fact": "Capricorn is ruled by Saturn, the planet of structure and discipline, which is why they appear wise and determined.",
         "emotional_tendency": "Capricorn may not express feelings quickly and prefers control. Once they trust someone, they are extremely loyal.",
-        "compatibility_notes": "Capricorn matches well with Taurus and Virgo because these signs understand patience and building a stable future.",
+        "explanation": "As an Earth sign, Capricorn values tradition, achievement, and structure. You connect best with fellow Earth signs who share your ambition, or Water signs who can soften your stoic exterior.",
         "general_advice": "Do not carry every burden alone. Strength is also about allowing yourself to rest and trust others.",
         "hidden_talent": "You may have a hidden talent for leadership, business management, strategy, and long-term planning."
+      },
+      "pair_compatibility": {
+        "aries": "A battle for the top. You are slow and steady; Aries is fast and impulsive.",
+        "taurus": "A solid and reliable match. You both value money, security, and hard work.",
+        "gemini": "You find Gemini too flighty, and they find you too boring.",
+        "cancer": "Opposites attract. You provide the structure, and Cancer provides the emotion.",
+        "leo": "Leo's need for attention clashes with your need for quiet respect.",
+        "virgo": "An incredibly efficient and supportive match. You both love a good plan.",
+        "libra": "Libra is too focused on social life, while you are focused on your career.",
+        "scorpio": "A powerful and deep match. You both value loyalty and taking things seriously.",
+        "sagittarius": "Sagittarius is too irresponsible for your disciplined heart.",
+        "capricorn": "Very successful and stable, but you might forget to stop working and live life.",
+        "aquarius": "You value the past and tradition, while Aquarius only cares about the future.",
+        "pisces": "A lovely match. You ground Pisces, and they help you tap into your feelings."
+      },
+      "zodiac story": {
+        "♑ Capricorn — The Panicked God": "Pan, the god of the wild, had the upper body of a man and the lower body of a goat. He was known for playing the pan flutes. During a gathering of the gods by the river, the terrifying hundred-headed monster Typhon suddenly attacked. As the gods shape-shifted to flee, Pan panicked and dove into the Nile River, intending to turn into a fish. However, in his haste, he botched the spell: the half of him underwater became a fish tail, while the half above water remained a goat. This comical yet tragic \"Sea-Goat\" form became the constellation Capricorn."
       }
     },
     "aquarius": {
       "symbol": "♒",
+      "image_path": "images/Aquarius.png",
       "start": "01-20",
       "end": "02-18",
       "element": "Air",
       "lucky_colors": ["Electric Blue", "Silver", "Turquoise"],
       "lucky_numbers": [4, 8, 13, 22],
       "content": {
-        "overview": "You are the visionary who lives five minutes in the future. Being an Aquarius means feeling a bit like an outsider, but using that perspective to challenge the status quo and dream of a better world for everyone. You value intellectual freedom and deep, meaningful friendships over shallow social rules, and your 'eccentric' ideas are often the very things that lead to true innovation.",
-        "fun_fact": "Despite the name, Aquarius is an Air sign, not a Water sign. They are thinkers and innovators who 'pour' knowledge into the world.",
+        "overview": "You are the visionary who lives five minutes in the future. You value intellectual freedom and deep, meaningful friendships over shallow social rules.",
+        "fun_fact": "Despite the name, Aquarius is an Air sign. They are thinkers and innovators who pour knowledge into the world.",
         "emotional_tendency": "Aquarius can seem aloof, but they actually care about humanity as a whole. They prefer logic over messy emotional displays.",
-        "compatibility_notes": "Aquarius matches well with Gemini and Libra. They value friendship, intellectual freedom, and independence in a relationship.",
-        "general_advice": "Connection is a strength. Your independence is great, but don't forget that personal bonds are just as important as global ideas.",
+        "explanation": "As an Air sign, Aquarius is an innovator and a humanitarian who values independence. You naturally align with other Air signs or Fire signs who appreciate your uniqueness.",
+        "general_advice": "Connection is a strength. Your independence is great, but don't forget that personal bonds are just as important.",
         "hidden_talent": "You likely have a hidden talent for coding, social activism, inventing, or trend-spotting."
+      },
+      "pair_compatibility": {
+        "aries": "Exciting and bold. You both love to break the rules and try new things.",
+        "taurus": "Taurus is too traditional and stubborn for your rebellious spirit.",
+        "gemini": "A perfect intellectual match. You'll spend all night talking about the future.",
+        "cancer": "Cancer is too emotional and clingy for your need for space.",
+        "leo": "Opposites attract. Leo wants to be special; you want everyone to be equal.",
+        "virgo": "Too cold. You both think too much and don't feel enough.",
+        "libra": "An easy and social match. You both value fairness and intellectual freedom.",
+        "scorpio": "Scorpio's intensity and need for control clash with your independence.",
+        "sagittarius": "A match for the ages. You both love freedom, travel, and new ideas.",
+        "capricorn": "Capricorn's rules feel like a cage to your freedom-loving soul.",
+        "aquarius": "Two visionaries, but you might struggle with a lack of emotional warmth.",
+        "pisces": "You live in your head, and Pisces lives in their heart. Hard to connect."
+      },
+      "zodiac story":{
+        "♒ Aquarius — The Cupbearer of the Gods" : "Ganymede was a Trojan prince renowned as the most beautiful mortal youth on Earth. Zeus spotted him from the heavens and was instantly captivated by his beauty. Transforming into a giant eagle, Zeus swooped down and abducted the young shepherd, bringing him to Mount Olympus. There, Ganymede was granted eternal youth and made the official cupbearer of the gods, responsible for pouring their divine nectar. His image, holding a water jar to pour the nectar, became Aquarius."
       }
     },
     "pisces": {
       "symbol": "♓",
+      "image_path": "images/Pisces.png",
       "start": "02-19",
       "end": "03-20",
       "element": "Water",
       "lucky_colors": ["Seafoam Green", "Aquamarine", "Lavender"],
       "lucky_numbers": [3, 9, 12, 21],
       "content": {
-        "overview": "You are the dreamer who blurs the lines between reality and imagination. Being a Pisces means possessing a 'psychic' level of empathy that allows you to feel what others are feeling before they even speak. You are a natural healer and artist, often finding solace in music, poetry, or the ocean. Your gentle nature is a rare gift in a harsh world, reminding everyone to lead with kindness.",
-        "fun_fact": "Pisces is ruled by Neptune, the planet of dreams and illusions, which gives them their incredible creativity and psychic-like intuition.",
-        "emotional_tendency": "Pisces is an emotional sponge. They feel the energy of the room and are very sensitive to how others treat them.",
-        "compatibility_notes": "Pisces finds harmony with Cancer and Scorpio. they need a partner who respects their sensitivity and shares their romantic view of life.",
-        "general_advice": "Boundaries are healthy. You give so much to others—make sure you save some of that magic for yourself.",
+        "overview": "You are the dreamer who blurs reality and imagination. You possess a psychic level of empathy that allows you to feel others' emotions.",
+        "fun_fact": "Pisces is ruled by Neptune, the planet of dreams, which gives them incredible creativity and intuition.",
+        "emotional_tendency": "Pisces is an emotional sponge. They feel the energy of the room and are very sensitive.",
+        "explanation": "As a Water sign, Pisces is an intuitive dreamer who values compassion. You connect best with fellow Water signs or Earth signs who provide grounding.",
+        "general_advice": "Boundaries are healthy. You give so much to others—make sure you save some magic for yourself.",
         "hidden_talent": "You likely have a hidden talent for music, visual arts, healing, or creative writing."
-      }
+      },
+      "pair_compatibility": {
+        "aries": "Aries is too aggressive and might hurt your delicate feelings.",
+        "taurus": "A very sweet and grounded match. Taurus keeps your feet on the earth.",
+        "gemini": "Gemini's logic ignores your intuition. You'll feel misunderstood.",
+        "cancer": "A beautiful and psychic connection. You both feel things deeply.",
+        "leo": "Leo's big personality can overwhelm you, but they can also protect you.",
+        "virgo": "Opposites attract. Virgo handles the reality so you can handle the dreams.",
+        "libra": "Too much 'drifting'. Neither of you can make a firm decision.",
+        "scorpio": "An intense and soulful bond. You understand each other's depths.",
+        "sagittarius": "Sagittarius is too blunt and might unintentionally crush your dreams.",
+        "capricorn": "A very supportive match. Capricorn provides the structure you often lack.",
+        "aquarius": "Aquarius is too detached and logical for your romantic heart.",
+        "pisces": "Very spiritual and sweet, but you might both get lost in fantasy."
+      },
+       "zodiac story":{
+        "♓ Pisces — The Mother-Son Bond": "The story of Pisces takes place during the same disastrous monster attack as Capricorn. When Typhon ambushed the gods' banquet, Aphrodite (the goddess of love and beauty) and her son Eros (Cupid) leaped into the Euphrates River to escape. They transformed themselves into fish. To ensure they wouldn't be separated by the river's strong currents, Aphrodite tied their tails together with a ribbon. These two connected fish became the enduring symbol of Pisces."
+       }
     }
   },
   "compatibility_matrix": [
