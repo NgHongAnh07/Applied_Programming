@@ -60,7 +60,7 @@ class ZodiacApp:
                 show_personality(self.user_sign, self.zodiac_data)
 
             elif choice == "2":
-                while True: # New loop for multiple checks
+                while True:
                     print("\n--- Compatibility Check ---")
                     print("Available signs: " + ", ".join([s.capitalize() for s in self.signs_list]))
                     other_sign = input("Enter another zodiac sign: ").lower().strip()
