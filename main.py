@@ -1,4 +1,4 @@
-from storage_module import load_data, save_report
+from storage_module import load_data, save_report, read_report 
 from module import (
     is_valid_date,
     get_sign_from_date,
@@ -54,17 +54,20 @@ class ZodiacApp:
 
         while True:
             show_main_menu()
-            choice = input("Choose an option (1-4): ")
+            choice = input("Choose an option (1-5): ")
 
             if choice == "1":
                 show_personality(self.user_sign, self.zodiac_data)
 
             elif choice == "2":
-                while True: # New loop for multiple checks
+                while True:
                     print("\n--- Compatibility Check ---")
                     print("Available signs: " + ", ".join([s.capitalize() for s in self.signs_list]))
-                    other_sign = input("Enter another zodiac sign: ").lower().strip()
+                    
+                    other_sign = input("Enter a sign to check (or type 'menu' to go back): ").lower().strip()
 
+                    if other_sign == 'menu':
+                        break  # This breaks the inner loop and returns to the Main Menu
 
                     if other_sign in self.signs_list:
                         show_compatibility(
@@ -74,24 +77,24 @@ class ZodiacApp:
                             self.compatibility_matrix,
                             self.zodiac_data
                         )
-                        
-                        repeat = input("\nWould you like to check another sign? (yes/no): ").lower().strip()
-                        if repeat not in ['yes', 'y']:
+                        while True:
+                            again = input("\nWould you like to check another sign? (yes/no): ").lower().strip()
+                            if again in ['yes', 'no',]:
+                                break 
+                            else:
+                                print(" Invalid input. Please type 'yes' or 'no'.")
+
+                        if again in ['no']:
                             break 
-                    else:
-                        print("Invalid zodiac sign. Please check the spelling.")
+
             elif choice == "3":
                 print(f"\n--- Exploring the Legend of {self.user_sign.capitalize()} ---")
                 show_zodiac_story(self.user_sign, self.zodiac_data)
 
             elif choice == "4":
-                break
+                read_report()
 
-            else:
-                print("Invalid choice. Please choose again.")
-                continue
-
-            if not ask_continue():
+            elif choice == "5": 
                 break
         
         print(f"\nThank you for using the Zodiac System, {self.user_name}. Goodbye!")
