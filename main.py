@@ -1,4 +1,4 @@
-from storage_module import load_data, save_report, read_report 
+from storage_module import load_data, save_report, read_report
 from module import (
     is_valid_date,
     get_sign_from_date,
@@ -42,7 +42,7 @@ class ZodiacApp:
                         self.user_sign = sign
                         self.user_birth_month = month 
                         self.user_birth_day = day
-                
+                        
                         print(f"\nHello, {self.user_name}")
                         print(f"Your zodiac sign is: {self.user_sign.capitalize()} {self.zodiac_data[self.user_sign]['symbol']}")
                         
