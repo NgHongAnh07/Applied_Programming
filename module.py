@@ -39,7 +39,8 @@ def show_main_menu():
     print("1. Personality Analysis")
     print("2. Compatibility Check")
     print("3. Zodiac Stories")
-    print("4. Exit")
+    print("4. View My Saved Reports") 
+    print("5. Exit")
     print("="*30)
 
 def show_personality(sign, zodiac_data):
@@ -110,8 +111,6 @@ def show_zodiac_story(sign, zodiac_data):
     if not stories:
         print(f"\n📖 No legend found for {sign.capitalize()} yet.")
         return
-
-    print("\n" + "📜" + "="*40)
     print(f"      THE LEGEND OF {sign.upper()}")
     print("="*42)
 
