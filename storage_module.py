@@ -60,3 +60,26 @@ def save_report(user_name, month, day, sign_name, sign_data, filename="reports.t
             
     except Exception as e:
         print(f"\n Failed to write to {filename}. Error: {e}")
+
+def read_report(filename="reports.txt"):
+    """
+    Reads the reports.txt file and prints it to the terminal 
+    so the user can see their saved history.
+    """
+    if not os.path.exists(filename):
+        print(f"\n📂 No saved reports found yet in '{filename}'.")
+        return
+
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            content = file.read()
+            if not content.strip():
+                print("\n📂 The report file is empty.")
+            else:
+                print("\n" + "📜" * 20)
+                print("      YOUR SAVED ZODIAC HISTORY")
+                print("📜" * 20)
+                print(content)
+                print("=" * 40)
+    except Exception as e:
+        print(f"\nError reading the report: {e}")
