@@ -1,85 +1,121 @@
-import json
-import os
-from datetime import datetime
+from storage_module import load_data, save_report, read_report 
+from module import (
+    is_valid_date,
+    get_sign_from_date,
+    show_main_menu,
+    show_personality,
+    show_compatibility,
+    show_zodiac_story,
+    ask_continue
+)
 
-def load_data(filename="zodiac_data.json"):
-    """
-    Safely loads data from the external JSON file.
-    """
-    if not os.path.exists(filename):
-        print(f"\n CRITICAL ERROR: Could not find '{filename}'.")
-        return None
-        
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            data = json.load(file)
-            return data
-    except json.JSONDecodeError as e:
-        print(f"\n CRITICAL ERROR: JSON formatting error in '{filename}'. Details: {e}")
-        return None
-    except Exception as e:
-        print(f"\n UNEXPECTED ERROR: {e}")
-        return None
-
-
-def save_report(user_name, month, day, sign_name, sign_data, filename="reports.txt"):
-    """
-    Saves the COMPLETE user profile (including all text contents) to the reports log.
-    """
-    try:
-        with open(filename, "a", encoding="utf-8") as file:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+class ZodiacApp:
+    def __init__(self, filename):
+        self.data = load_data(filename)
+        if self.data:
+            self.signs_list = self.data["signs_list"]
+            self.zodiac_data = self.data["zodiac_data"]
+            self.compatibility_matrix = self.data["compatibility_matrix"]
+        else:
+            print("System failure: Data could not be loaded.")
+            exit()
             
-            element = sign_data["element"]
-            symbol = sign_data["symbol"]
-            colors = ", ".join(sign_data["lucky_colors"])
-            numbers = ", ".join(str(n) for n in sign_data["lucky_numbers"])
-            content = sign_data["content"]
-            
-    
-            report = (
-                f"\n==================================================\n"
-                f"🕒 [SAVED AT: {timestamp}]\n"
-                f"👤 USERNAME: {user_name}\n"
-                f"📅 BIRTHDAY: {str(month).zfill(2)}-{str(day).zfill(2)}\n"
-                f"✨ ZODIAC SIGN: {sign_name.capitalize()} {symbol}\n"
-                f"🔥 ELEMENT: {element}\n"
-                f"🎨 LUCKY COLORS: {colors}\n"
-                f"🎲 LUCKY NUMBERS: {numbers}\n"
-                f"--------------------------------------------------\n"
-                f"📖 OVERVIEW: {content['overview']}\n\n"
-                f"💡 FUN FACT: {content['fun_fact']}\n\n"
-                f"❤️ EMOTIONAL TENDENCY: {content['emotional_tendency']}\n\n"
-                f"🧭 GENERAL ADVICE: {content['general_advice']}\n\n"
-                f"🎯 HIDDEN TALENT: {content['hidden_talent']}\n"
-                f"==================================================\n"
-            )
-            
-            file.write(report)
-            print(f"\n SUCCESS: Your complete profile has been saved to '{filename}'.")
-            
-    except Exception as e:
-        print(f"\n Failed to write to {filename}. Error: {e}")
+        self.user_name = ""
+        self.user_sign = ""
 
-def read_report(filename="reports.txt"):
-    """
-    Reads the reports.txt file and prints it to the terminal 
-    so the user can see their saved history.
-    """
-    if not os.path.exists(filename):
-        print(f"\n📂 No saved reports found yet in '{filename}'.")
-        return
+    def get_user_info(self):
+        print("===== WELCOME TO THE ZODIAC SYSTEM =====")
+        self.user_name = input("Enter your name: ").strip()
 
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            content = file.read()
-            if not content.strip():
-                print("\n📂 The report file is empty.")
+        while True:
+            try:
+                month = int(input("Enter your birth month (1-12): "))
+                day = int(input("Enter your birth day (1-31): "))
+
+                if is_valid_date(month, day):
+                    sign = get_sign_from_date(month, day, self.zodiac_data)
+                    if sign is not None:
+                        self.user_sign = sign
+                        print(f"\nHello, {self.user_name}")
+                        print(f"Your zodiac sign is: {self.user_sign.capitalize()} {self.zodiac_data[self.user_sign]['symbol']}")
+                        
+                        specific_sign_info = self.zodiac_data[self.user_sign]
+                        save_choice = input("\nWould you like to save your profile to the report file? (yes/no): ").lower().strip()
+                        
+                        if save_choice in ['yes', 'y']:
+                            specific_sign_info = self.zodiac_data[self.user_sign]
+                            save_report(self.user_name, month, day, self.user_sign, specific_sign_info)
+                        else:
+                            print("Understood. Your information will not be saved.")
+                        # ------------------------------
+                        
+                        break
+                    else:
+                        print("Could not find zodiac sign. Try again.")
+                else:
+                    print("Invalid date. Please enter again.")
+            except ValueError:
+                print("Please enter numbers only.")
+
+    def run(self):
+        self.get_user_info()
+
+        while True:
+            show_main_menu()
+            choice = input("Choose an option (1-5): ")
+
+            if choice == "1":
+                show_personality(self.user_sign, self.zodiac_data)
+            
+            elif choice == "2":
+                while True:
+                    print("\n--- Compatibility Check ---")
+                    print("Available signs: " + ", ".join([s.capitalize() for s in self.signs_list]))
+                    other_sign = input("Enter a sign (or 'menu' to go back): ").lower().strip()
+
+                    if other_sign == 'menu':
+                        break
+
+                    if other_sign in self.signs_list:
+                        show_compatibility(self.user_sign, other_sign, self.signs_list, 
+                                           self.compatibility_matrix, self.zodiac_data)
+                        
+                        while True:
+                            again = input("\nCheck another sign? (yes/no): ").lower().strip()
+                            if again in ['yes', 'no']:
+                                break
+                            print("Please type 'yes' or 'no'.")
+                        
+                        if again in ['no', 'n']:
+                            break
+                    else:
+                        print("Sign not recognized.")
+
+            elif choice == "3":
+                print(f"\n--- Legend of {self.user_sign.capitalize()} ---")
+                show_zodiac_story(self.user_sign, self.zodiac_data)
+
+            elif choice == "4":
+                read_report()
+
+            elif choice == "5": 
+                print(f"\nThank you for using the Zodiac System, {self.user_name}. Goodbye!")
+                exit() 
+
             else:
-                print("\n" + "📜" * 20)
-                print("      YOUR SAVED ZODIAC HISTORY")
-                print("📜" * 20)
-                print(content)
-                print("=" * 40)
-    except Exception as e:
-        print(f"\nError reading the report: {e}")
+                print("Invalid choice.")
+                continue
+
+            while True:
+                user_choice = input("\nDo you want to return to the menu? (yes/no): ").lower().strip()
+                if user_choice in ['yes', 'y']:
+                    break 
+                elif user_choice in ['no', 'n']:
+                    print(f"\nThank you for using the Zodiac System, {self.user_name}. Goodbye!")
+                    exit() 
+                else:
+                    print("Please type 'yes' or 'no'.")
+
+if __name__ == "__main__":
+    app = ZodiacApp("zodiac_data.json")
+    app.run()
