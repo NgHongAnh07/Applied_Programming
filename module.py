@@ -60,7 +60,7 @@ def show_personality(sign, zodiac_data):
     print(f"\n❤️ Emotional: {content['emotional_tendency']}")
     print(f"\n🎯 Talent   : {content['hidden_talent']}")
     print(f"\n🧭 Advice   : {content['general_advice']}")
-    print("*"*45)
+    print("\n" + "*"*45)
 
 def get_sign_index(signs_list, sign_name):
     """Finds the index of a sign for matrix lookup."""
