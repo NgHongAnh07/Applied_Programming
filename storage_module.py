@@ -52,3 +52,4 @@ def read_report(current_user, filename="reports.txt"):
             print(file.read())
     except Exception as e:
         print(f"Error: {e}")
+        
