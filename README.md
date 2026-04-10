@@ -1,4 +1,3 @@
-
 # Applied_Programming
 "Horoscope_Project"
 # [Project Title] -  "Horoscope_Project"

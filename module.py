@@ -48,6 +48,19 @@ def show_personality(sign, zodiac_data):
     info = zodiac_data[sign]
     content = info["content"]
 
+<<<<<<< HEAD
+    print("\n===== PERSONALITY ANALYSIS =====")
+    print("Sign:", sign.capitalize(), info["symbol"])
+    print("Element:", info["element"])
+    print("Lucky Colors:", ", ".join(info["lucky_colors"]))
+    print("Lucky Numbers:", ", ".join(str(num) for num in info["lucky_numbers"]))
+    print("\nOverview:", content["overview"])
+    print("\nFun Fact:", content["fun_fact"])
+    print("\nEmotional Tendency:", content["emotional_tendency"])
+    print("\nGeneral Advice:", content["general_advice"])
+    print("\nHidden Talent:", content["hidden_talent"])
+
+=======
     print("\n" + "*"*45)
     print(f"🌟 ANALYSIS: {sign.upper()} {info['symbol']}")
     print("*"*45)
@@ -61,6 +74,7 @@ def show_personality(sign, zodiac_data):
     print(f"\n🎯 Talent   : {content['hidden_talent']}")
     print(f"\n🧭 Advice   : {content['general_advice']}")
     print("*"*45)
+>>>>>>> origin/hanh
 
 def get_sign_index(signs_list, sign_name):
     """Finds the index of a sign for matrix lookup."""
@@ -89,10 +103,15 @@ def show_compatibility(user_sign, other_sign, signs_list, compatibility_matrix, 
     else: result = "Challenging Connection."
     print(f"Final Result: {result}")
 
+<<<<<<< HEAD
+    print("\n===== COMPATIBILITY CHECK =====")
+    print(user_sign.capitalize(), "and", other_sign.capitalize(), "compatibility score:", score, "%")
+=======
     # --- CRITICAL FIX FOR PAIR COMPATIBILITY ---
     # Force both signs to lowercase to match JSON keys
     u_key = user_sign.lower()
     o_key = other_sign.lower()
+>>>>>>> origin/hanh
 
     # Access: zodiac_data -> [user_sign] -> pair_compatibility -> [other_sign]
     pair_desc = zodiac_data.get(u_key, {}).get("pair_compatibility", {}).get(o_key)
@@ -100,6 +119,17 @@ def show_compatibility(user_sign, other_sign, signs_list, compatibility_matrix, 
     if pair_desc:
         print(f"\nRelationship Deep Dive: \n\"{pair_desc}\"")
     else:
+<<<<<<< HEAD
+        print("Result: Challenging match.")
+    
+    data = load_data("zodiac_data.json")
+    message = data.get("zodiac_data", {}).get(user_sign, {}).get("pair_compatibility", {}).get(other_sign)
+
+    if message:
+        print(message)
+    else:
+        print("Compatibility description not found.")
+=======
         print("\n(Specific relationship details not found for this pair.)")
 
 def show_zodiac_story(sign, zodiac_data):
@@ -107,6 +137,7 @@ def show_zodiac_story(sign, zodiac_data):
     sign_key = sign.lower()
     info = zodiac_data.get(sign_key, {})
     stories = info.get("zodiac story", {})
+>>>>>>> origin/hanh
 
     if not stories:
         print(f"\n📖 No legend found for {sign.capitalize()} yet.")

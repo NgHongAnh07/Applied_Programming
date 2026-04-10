@@ -100,7 +100,7 @@ class ZodiacApp:
 
             elif choice == "5": 
                 print(f"\nThank you for using the Zodiac System, {self.user_name}. Goodbye!")
-                exit() # Direct exit for option 5
+                exit()
 
             else:
                 print("Invalid choice.")
@@ -109,10 +109,10 @@ class ZodiacApp:
             while True:
                 user_choice = input("\nDo you want to return to the menu? (yes/no): ").lower().strip()
                 if user_choice in ['yes', 'y']:
-                    break # Breaks this small loop to show the Main Menu
+                    break
                 elif user_choice in ['no', 'n']:
                     print(f"\nThank you for using the Zodiac System, {self.user_name}. Goodbye!")
-                    exit() # Closes the program
+                    exit() 
                 else:
                     print("Please type 'yes' or 'no'.")
 
